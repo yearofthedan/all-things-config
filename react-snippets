@@ -1,0 +1,50 @@
+'.source.js':
+  'React functional':
+    'prefix': 'rfn'
+    'body': '''
+    import React from 'react'
+
+    const $1 = ({...props}) => (
+      null
+    )
+
+    export default $1
+    '''
+  'React class':
+    'prefix': 'rcl'
+    'body': '''
+    import React, { Component } from 'react'
+
+    class $1 extends Component {
+
+      constructor () {
+        super(this.props)
+        this.state = {}
+      }
+
+      componentDidMount () {
+      }
+
+      render () {
+        return (
+          null
+        )
+      }
+    }
+
+    export default $1
+    '''
+  'React test':
+    'prefix': 'rtest'
+    'body': '''
+    import React from 'react'
+    import $1 from '../$1'
+    import { shallow } from 'enzyme'
+
+    describe('<$1>', () => {
+      it('renders the component', () => {
+        const rendered = shallow(<$1 />)
+        expect(rendered.type()).not.toBeNull()
+      })
+    })
+    '''
